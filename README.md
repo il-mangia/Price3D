@@ -1,5 +1,3 @@
-# Price3D
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/il-mangia/Price3D/main/Logo.png" alt="Price3D logo" width="160">
 </p>
