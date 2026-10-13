@@ -77,9 +77,26 @@ APP_NAME = "Price3D"
 __version__ = "1.0"
 GITHUB_URL = "https://github.com/il-mangia/Price3D"
 GITHUB_API_LATEST = "https://api.github.com/repos/il-mangia/Price3D/releases/latest"
-BASE_DIR = Path(__file__).resolve().parent          # file bundlati (Logo.png, languages.json)
-LANG_FILE = BASE_DIR / "languages.json"
-LOGO_FILE = BASE_DIR / "Logo.png"
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys._MEIPASS)  # file bundlati dentro l'exe PyInstaller
+else:
+    BASE_DIR = Path(__file__).resolve().parent  # file accanto allo script
+
+
+def _bundled(name: str) -> Path:
+    """Cerca un file bundlato: prima in BASE_DIR, poi nella cartella padre
+    (layout con codice in 'Source Code/' e Logo.png nella root del repo)."""
+    p = BASE_DIR / name
+    if p.is_file():
+        return p
+    q = BASE_DIR.parent / name
+    if q.is_file():
+        return q
+    return p
+
+
+LANG_FILE = _bundled("languages.json")
+LOGO_FILE = _bundled("Logo.png")
 
 
 def app_dir_path() -> Path:
