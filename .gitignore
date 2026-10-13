@@ -1,3 +1,5 @@
-__pycache__/dist/
+__pycache__/
+*.py[cod]
+dist/
 build/
 *.spec
