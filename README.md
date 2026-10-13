@@ -30,7 +30,7 @@
   <a href="#features">Features</a> ·
   <a href="#requirements">Requirements</a> ·
   <a href="#download">Download</a> ·
-  <a href="#usage">Usage</a> ·
+  <a href="#developer-usage">Usage</a> ·
   <a href="#printer-profiles">Profiles</a> ·
   <a href="#pdf-and-word-order-summary">Export</a> ·
   <a href="#file-structure">File structure</a> ·
@@ -82,20 +82,16 @@ pip install PyQt6 reportlab python-docx Pillow
 ```
 ## Download
 
-Grab the build for your operating system from the [**Releases**](https://github.com/il-mangia/Price3D/releases/latest) page.
-
 ### Windows
 
 1. Download the latest `Price3D_vX.X.exe` file.
 2. Double-click it — no installation needed, it's a portable executable.
-
 > If Windows SmartScreen warns you about an unrecognized app, click **More info → Run anyway**. This happens because the executable isn't code-signed.
 
 ### macOS
 
 1. Download the latest macOS build (`.dmg` or `.zip`, depending on the release).
 2. Open it and drag **Price3D** into your **Applications** folder.
-
 > On first launch, macOS Gatekeeper may block the app because it isn't notarized. Right-click the app → **Open** → confirm **Open** in the dialog to allow it once.
 
 ### Linux
@@ -109,7 +105,11 @@ chmod +x Price3D
 ./Price3D
 ```
 
-## Usage
+### Developer Download
+Grab the build for your operating system from the [**Releases**](https://github.com/il-mangia/Price3D/releases/latest) page.
+
+
+## Developer Usage
 
 Running from source instead of a release build:
 
