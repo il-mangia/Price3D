@@ -865,7 +865,7 @@ class FirstRunWizard(QDialog):
             "consumo_w": self.p_power.value(),
             "costo_materiale": self.p_material.value(),
             "costo_progettazione": self.p_design.value(),
-            "consumo_pc_w": self.pc_spin.value(),
+            "consumo_pc_w": self.p_pc.value(),
         })
         self.accept()
 
